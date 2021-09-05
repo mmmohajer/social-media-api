@@ -35,10 +35,12 @@ if (process.env.NODE_ENV === "development") {
 // Import Routes
 const userRoute = require("./routes/users");
 const authRoute = require("./routes/auth");
+const postRoute = require("./routes/posts");
 
 // Endpoints
 app.use("/api/users", userRoute);
 app.use("/api/auth", authRoute);
+app.use("/api/posts", postRoute);
 
 // Port
 const port = process.env.PORT || 8000;

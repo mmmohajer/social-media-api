@@ -32,6 +32,8 @@ if (process.env.NODE_ENV === "development") {
   app.use(cors({ origin: `${process.env.CLIENT_URL}` }));
 }
 
+// Routes Must be added Here
+
 // Port
 const port = process.env.PORT || 8000;
 app.listen(port, () => {

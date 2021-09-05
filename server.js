@@ -32,7 +32,13 @@ if (process.env.NODE_ENV === "development") {
   app.use(cors({ origin: `${process.env.CLIENT_URL}` }));
 }
 
-// Routes Must be added Here
+// Import Routes
+const userRoute = require("./routes/users");
+const authRoute = require("./routes/auth");
+
+// Endpoints
+app.use("/api/users", userRoute);
+app.use("/api/auth", authRoute);
 
 // Port
 const port = process.env.PORT || 8000;
